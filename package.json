@@ -1,0 +1,14 @@
+{
+  "name": "local-web-server",
+  "version": "1.0.0",
+  "description": "A web server that serves files from the local filesystem",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "web"
+  ],
+  "author": "Ian Brown",
+  "license": "MIT"
+}
