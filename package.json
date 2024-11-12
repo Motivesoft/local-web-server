@@ -1,7 +1,7 @@
 {
   "name": "local-web-server",
   "version": "1.0.0",
-  "description": "A web server that serves files from the local filesystem",
+  "description": "A web server that serves static content from the local filesystem",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -10,5 +10,10 @@
     "web"
   ],
   "author": "Ian Brown",
-  "license": "MIT"
+  "publisher": "Motivesoft",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Motivesoft/local-web-server.git"
+  }
 }
