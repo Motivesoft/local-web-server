@@ -2,13 +2,26 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-// Get command-line arguments
+// Get command-line arguments. Slice(2) is because args 0 and 1 are the node executable and this script file
 const args = process.argv.slice(2);
 
 // Look for switches
+const helpArg = args.find(arg => (arg == '--help' || arg == '-h'));
 const hostnameArg = args.find(arg => arg.startsWith('--hostname='));
 const portArg = args.find(arg => arg.startsWith('--port='));
 const publicFolderArg = args.find(arg => arg.startsWith('--public='));
+
+if( helpArg ) {
+    console.log("Usage:");
+    console.log("  node server.js [args]");
+    console.log();    
+    console.log("Arguments (and defaults):");
+    console.log("  --hostname=localhost     -- host name for the server");
+    console.log("  --port=3000              -- port to serve pages from");
+    console.log("  --public=./public        -- directory containing content");
+    console.log("  --help, -h               -- this help information");
+    return
+}
 
 // Look for hostname or use default (localhost)
 const hostname = hostnameArg 
